@@ -118,6 +118,10 @@
   .card ul { margin: 0; padding-left: 1.1rem; }
   .card li { margin: .3rem 0; }
   .note { color: var(--muted); font-size: .92rem; margin-top: 1.25rem; max-width: 44rem; }
+  a.example { color: var(--text); text-decoration: none; transition: border-color .15s; }
+  a.example:hover, a.example:focus-visible { border-color: var(--accent); }
+  .swatch { display: block; height: 7rem; border-radius: .5rem; margin-bottom: 1rem; border: 1px solid var(--line); }
+  .example .meta { margin: 0; }
 
   ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; display: grid; gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
@@ -157,6 +161,7 @@
       <nav class="links" aria-label="Main">
         <a href="#pricing">Pricing</a>
         <a href="#process">How it works</a>
+        <a href="#examples">Examples</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -232,6 +237,25 @@
           <li><h3>Build and review</h3><p>You send your text, photos and logo. I build the site and you review it.</p></li>
           <li><h3>Launch</h3><p>After final payment, the site goes live on your domain and you get the keys.</p></li>
         </ol>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="wrap">
+        <h2>Examples</h2>
+        <p class="section-intro">Two sample sites for fictional businesses, one for each website package, so you can see the kind of result to expect.</p>
+        <div class="cards">
+          <a class="card example" href="demos/riverbend-bakehouse/">
+            <span class="swatch" style="background: linear-gradient(135deg, #fbf5ec 0 55%, #f2c66d 55% 75%, #8a4b1f 75%);"></span>
+            <h3>Riverbend Bakehouse</h3>
+            <p class="meta">One-Page Launch Website · sample</p>
+          </a>
+          <a class="card example" href="demos/hollis-clay/">
+            <span class="swatch" style="background: linear-gradient(135deg, #f4f1ec 0 55%, #3f6f6a 55% 75%, #b9774f 75%);"></span>
+            <h3>Hollis Clay Studio</h3>
+            <p class="meta">Small Website, 3 pages · sample</p>
+          </a>
+        </div>
       </div>
     </section>
 
