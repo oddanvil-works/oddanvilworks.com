@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riverbend Bakehouse (sample site) · OddAnvil Works</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="A sample one-page website for a fictional bakery, built by OddAnvil Works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --cream: #fbf5ec; --crust: #8a4b1f; --ink: #2b2118; --soft: #6b5a4b; --butter: #f2c66d; --line: #ead9c3; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 400 1.05rem/1.6 "Work Sans", system-ui, sans-serif; }
+  .sample { background: #1c1a17; color: #f1ece3; font-size: .85rem; text-align: center; padding: .55rem 1rem; }
+  .sample a { color: #e38f3f; }
+  .wrap { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; }
+  .logo { font: 1.5rem/1 "DM Serif Display", Georgia, serif; color: var(--crust); text-decoration: none; }
+  nav a { color: var(--soft); text-decoration: none; margin-left: 1.1rem; font-size: .95rem; }
+  @media (max-width: 36rem) { nav { display: none; } }
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; padding: 2.5rem 0 3.5rem; }
+  @media (max-width: 44rem) { .hero { grid-template-columns: 1fr; } }
+  h1 { font: clamp(2.3rem, 7vw, 3.6rem)/1.05 "DM Serif Display", Georgia, serif; margin: 0 0 1rem; }
+  h2 { font: 2rem/1.1 "DM Serif Display", Georgia, serif; margin: 0 0 1rem; }
+  .lede { color: var(--soft); font-size: 1.15rem; margin: 0 0 1.5rem; }
+  .btn { display: inline-block; background: var(--crust); color: #fff; padding: .8rem 1.3rem; border-radius: 999px; text-decoration: none; font-weight: 600; }
+  .btn.ghost { background: transparent; color: var(--crust); border: 2px solid var(--crust); margin-left: .5rem; }
+  .art { aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #f7d896, var(--butter) 45%, #d99a3e 75%, var(--crust)); box-shadow: inset -18px -24px 40px rgba(0,0,0,.18); position: relative; }
+  .art::after { content: ""; position: absolute; inset: 22% 18%; border-top: 6px solid rgba(255,255,255,.45); border-radius: 50%; transform: rotate(-12deg); }
+  section { padding: 3rem 0; border-top: 1px solid var(--line); }
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+  .item { background: #fff; border: 1px solid var(--line); border-radius: 1rem; padding: 1.25rem; }
+  .item h3 { margin: 0 0 .25rem; font-size: 1.1rem; display: flex; justify-content: space-between; }
+  .item p { margin: 0; color: var(--soft); font-size: .95rem; }
+  .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2rem; }
+  table { border-collapse: collapse; width: 100%; }
+  td { padding: .35rem 0; border-bottom: 1px dashed var(--line); }
+  td:last-child { text-align: right; color: var(--soft); }
+  footer { padding: 2rem 0 3rem; color: var(--soft); font-size: .9rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+  <div class="sample">Sample site for a fictional business, built by <a href="/">OddAnvil Works</a>. One-Page Launch Website, from $399.</div>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#">Riverbend Bakehouse</a>
+      <nav><a href="#menu">Menu</a><a href="#visit">Visit</a><a href="#order">Order</a></nav>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Bread worth getting up early for.</h1>
+        <p class="lede">Sourdough, laminated pastries and Saturday cinnamon rolls, baked in small batches every morning by the river.</p>
+        <a class="btn" href="#order">Order ahead</a><a class="btn ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="art" role="img" aria-label="Illustration of a round golden loaf"></div>
+    </div>
+
+    <section id="menu">
+      <h2>This week's bakes</h2>
+      <div class="menu">
+        <div class="item"><h3>Country sourdough <span>$9</span></h3><p>48-hour ferment, crackly crust, open crumb.</p></div>
+        <div class="item"><h3>Butter croissant <span>$4</span></h3><p>Three days of lamination, cultured butter.</p></div>
+        <div class="item"><h3>Cinnamon roll <span>$5</span></h3><p>Saturdays only, until they're gone.</p></div>
+        <div class="item"><h3>Seasonal galette <span>$6</span></h3><p>Whatever fruit looked best at market this week.</p></div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="info">
+        <div>
+          <h2>Visit</h2>
+          <p>123 Example Street<br>Riverbend, KY (fictional)</p>
+          <p>Street parking out front, bike rack by the door.</p>
+        </div>
+        <div>
+          <h2>Hours</h2>
+          <table>
+            <tr><td>Wednesday to Friday</td><td>7am to 2pm</td></tr>
+            <tr><td>Saturday</td><td>7am to 1pm</td></tr>
+            <tr><td>Sunday to Tuesday</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Order ahead</h2>
+      <p class="lede">Pre-orders for whole loaves and dozens close at 5pm the day before pickup.</p>
+      <a class="btn" href="mailto:hello@oddanvilworks.com?subject=About%20the%20Riverbend%20sample%20site">Start an order</a>
+    </section>
+
+    <footer>Riverbend Bakehouse is a fictional business. This page shows what a One-Page Launch Website from <a href="/">OddAnvil Works</a> can look like.</footer>
+  </div>
+</body>
+</html>
