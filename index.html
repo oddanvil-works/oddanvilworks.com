@@ -10,7 +10,11 @@
 <meta property="og:description" content="One-page sites from $399. Small 3–5 page sites from $799. Clear scope, fixed price, launched in weeks.">
 <meta property="og:url" content="https://oddanvilworks.com/">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://oddanvilworks.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OddAnvil Works: fixed-price websites. One-page from $399, 3–5 pages from $799.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1c1a17">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c1a17'/%3E%3Cpath d='M12 24h34c0 6 6 8 8 8v4H40l-4 6h6v6H22v-6h6l-4-6h-4c-4 0-8-4-8-12z' fill='%23d9822b'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +70,9 @@
   a { color: var(--accent); }
   .wrap { width: 100%; max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
   .narrow { max-width: 44rem; }
+
+  .offer { background: var(--accent-soft); font-size: .93rem; padding: .6rem 0; text-align: center; }
+  .offer a { color: var(--accent); font-weight: 600; white-space: nowrap; }
 
   header.top { padding: 1.5rem 0; }
   header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
@@ -152,6 +159,9 @@
 </style>
 </head>
 <body>
+  <div class="offer">
+    <div class="wrap"><strong>Founding Client offer:</strong> the first 5 clients, through November 30, get a free Google Business Profile setup. <a href="#founding">How it works</a></div>
+  </div>
   <header class="top">
     <div class="wrap">
       <a class="brand" href="#top" aria-label="OddAnvil Works home">
@@ -305,6 +315,10 @@
           <summary>How do payments work?</summary>
           <p>50% when you book, 50% when the site is ready to launch. Invoices are sent online and can be paid by card. Extra work outside the agreed scope is quoted first, at $75 per hour.</p>
         </details>
+        <details id="founding">
+          <summary>What is the Founding Client offer?</summary>
+          <p>The first 5 clients who book by November 30, 2026 pay the normal price and also get their Google Business Profile set up or cleaned up for free (normally part of the $150 Digital Setup). In return, I ask for a short testimonial, a Google review if you're happy, and permission to show your site under Examples.</p>
+        </details>
         <details>
           <summary>Do you only work with businesses in Paducah?</summary>
           <p>No. I'm based in Paducah, Kentucky, and everything is done remotely, so I can work with you wherever you are.</p>
@@ -333,5 +347,10 @@
       <a href="mailto:hello@oddanvilworks.com">hello@oddanvilworks.com</a>
     </div>
   </footer>
+  <script>
+    // Open an FAQ answer when a link points to it, e.g. #founding
+    function openFromHash() { var d = document.getElementById(location.hash.slice(1)); if (d && d.tagName === "DETAILS") d.open = true; }
+    addEventListener("hashchange", openFromHash); openFromHash();
+  </script>
 </body>
 </html>
