@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OddAnvil Works — Websites for interesting projects</title>
+<meta name="description" content="OddAnvil Works builds straightforward, fixed-price websites for independent creators, small businesses, and people bringing new ideas to life.">
+<meta property="og:title" content="OddAnvil Works">
+<meta property="og:description" content="Fixed-price websites for creators, small businesses, and new projects.">
+<meta property="og:url" content="https://oddanvilworks.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1c1a17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c1a17'/%3E%3Cpath d='M12 24h34c0 6 6 8 8 8v4H40l-4 6h6v6H22v-6h6l-4-6h-4c-4 0-8-4-8-12z' fill='%23d9822b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f2ea;
+    --surface: #ffffff;
+    --text: #1c1a17;
+    --muted: #5d574e;
+    --accent: #b45f17;
+    --line: #e2dbcd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161412;
+      --surface: #201d1a;
+      --text: #f1ece3;
+      --muted: #b0a898;
+      --accent: #e38f3f;
+      --line: #34302a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 400 1.0625rem/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { width: 100%; max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+  header { padding: 2rem 0 0; }
+  .brand {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font: 600 1.05rem/1 Fraunces, Georgia, serif; letter-spacing: .01em;
+  }
+  .brand svg { width: 2rem; height: 2rem; }
+  main { flex: 1; padding: 4.5rem 0 3rem; }
+  .eyebrow {
+    display: inline-block; font-size: .8rem; font-weight: 500;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font: 600 clamp(2.1rem, 6vw, 3.2rem)/1.1 Fraunces, Georgia, serif;
+    margin: 0 0 1.25rem; letter-spacing: -.01em;
+  }
+  .lede { font-size: 1.15rem; color: var(--muted); margin: 0 0 2.75rem; max-width: 36rem; }
+  h2 { font-size: .95rem; font-weight: 500; margin: 0 0 1rem; }
+  ul.coming { list-style: none; padding: 0; margin: 0 0 3rem; display: grid; gap: .75rem; }
+  ul.coming li {
+    background: var(--surface); border: 1px solid var(--line); border-radius: .6rem;
+    padding: .9rem 1.1rem; display: flex; gap: .8rem; align-items: baseline;
+  }
+  ul.coming li::before { content: ""; flex: none; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); transform: translateY(-.1rem); }
+  .cta { border-top: 1px solid var(--line); padding-top: 2rem; }
+  .cta p { margin: 0 0 1.1rem; color: var(--muted); }
+  .button {
+    display: inline-block; background: var(--text); color: var(--bg);
+    text-decoration: none; font-weight: 500; padding: .8rem 1.3rem; border-radius: .5rem;
+  }
+  .button:hover, .button:focus-visible { background: var(--accent); color: #fff; }
+  .button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  footer { padding: 2rem 0; font-size: .85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="currentColor"/><path d="M12 24h34c0 6 6 8 8 8v4H40l-4 6h6v6H22v-6h6l-4-6h-4c-4 0-8-4-8-12z" fill="#d9822b"/></svg>
+        OddAnvil Works
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <span class="eyebrow">Opening soon</span>
+      <h1>A practical home for interesting projects.</h1>
+      <p class="lede">OddAnvil Works builds straightforward websites for independent creators, small businesses, and people bringing new ideas to life. Fixed-price website launches come first, with practical digital setup available when a project needs more than a website.</p>
+
+      <h2>What's coming</h2>
+      <ul class="coming">
+        <li>One-page websites for new projects and ideas.</li>
+        <li>Small, multi-page websites for creators and businesses.</li>
+        <li>Notion setup and basic connections between existing apps.</li>
+      </ul>
+
+      <section class="cta">
+        <h2>Have a project in mind?</h2>
+        <p>Tell us what you're building.</p>
+        <a class="button" href="mailto:hello@oddanvilworks.com">hello@oddanvilworks.com</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 OddAnvil Works LLC</div>
+  </footer>
+</body>
+</html>
