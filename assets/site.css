@@ -1,0 +1,130 @@
+:root {
+  --bg: #f6f2ea;
+  --surface: #ffffff;
+  --text: #1c1a17;
+  --muted: #5d574e;
+  --accent: #b45f17;
+  --accent-soft: #f3e3d1;
+  --line: #e2dbcd;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161412;
+    --surface: #201d1a;
+    --text: #f1ece3;
+    --muted: #b0a898;
+    --accent: #e38f3f;
+    --accent-soft: #3a2a1b;
+    --line: #34302a;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1.0625rem/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--accent); }
+.wrap { width: 100%; max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+.narrow { max-width: 44rem; }
+
+.offer { background: var(--accent-soft); font-size: .93rem; padding: .6rem 0; text-align: center; }
+.offer a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+
+header.top { padding: 1.5rem 0; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand {
+  display: inline-flex; align-items: center; gap: .6rem; color: var(--text); text-decoration: none;
+  font: 600 1.05rem/1 Fraunces, Georgia, serif; letter-spacing: .01em;
+}
+.brand svg { width: 2rem; height: 2rem; }
+nav.links { display: flex; gap: 1.25rem; font-size: .95rem; }
+nav.links a { color: var(--muted); text-decoration: none; }
+nav.links a:hover { color: var(--text); }
+@media (max-width: 40rem) { nav.links { display: none; } }
+
+section { padding: 3.5rem 0; }
+.hero { padding: 4rem 0 3.5rem; }
+.eyebrow {
+  display: inline-block; font-size: .8rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+}
+h1 {
+  font: 600 clamp(2.1rem, 6vw, 3.4rem)/1.08 Fraunces, Georgia, serif;
+  margin: 0 0 1.25rem; letter-spacing: -.01em; max-width: 40rem;
+}
+h2 {
+  font: 600 clamp(1.6rem, 4vw, 2.1rem)/1.15 Fraunces, Georgia, serif;
+  margin: 0 0 .75rem;
+}
+h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 .4rem; }
+.lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 2rem; max-width: 38rem; }
+.section-intro { color: var(--muted); margin: 0 0 2rem; max-width: 40rem; }
+
+.button {
+  display: inline-block; background: var(--text); color: var(--bg);
+  text-decoration: none; font-weight: 500; padding: .85rem 1.35rem; border-radius: .5rem;
+}
+.button.secondary { background: transparent; color: var(--text); border: 1px solid var(--line); }
+.button:hover, .button:focus-visible { background: var(--accent); color: #fff; border-color: var(--accent); }
+.button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: .75rem;
+  padding: 1.5rem; display: flex; flex-direction: column;
+}
+.card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.price { font: 600 2rem/1 Fraunces, Georgia, serif; margin: .5rem 0 .25rem; }
+.price small { font: 400 .9rem/1 Inter, sans-serif; color: var(--muted); }
+.meta { color: var(--muted); font-size: .9rem; margin: 0 0 1rem; }
+.card ul { margin: 0; padding-left: 1.1rem; }
+.card li { margin: .3rem 0; }
+.note { color: var(--muted); font-size: .92rem; margin-top: 1.25rem; max-width: 44rem; }
+a.example { color: var(--text); text-decoration: none; transition: border-color .15s; }
+a.example:hover, a.example:focus-visible { border-color: var(--accent); }
+.swatch { display: block; height: 7rem; border-radius: .5rem; margin-bottom: 1rem; border: 1px solid var(--line); }
+.example .meta { margin: 0; }
+
+ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+ol.steps li { counter-increment: step; background: var(--surface); border: 1px solid var(--line); border-radius: .75rem; padding: 1.25rem; }
+ol.steps li::before {
+  content: counter(step); display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem;
+  border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 600; margin-bottom: .75rem;
+}
+ol.steps p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem 2rem; }
+.two-col ul { margin: 0; padding-left: 1.1rem; }
+.two-col li { margin: .35rem 0; }
+
+details { border-bottom: 1px solid var(--line); padding: 1rem 0; }
+details:first-of-type { border-top: 1px solid var(--line); }
+summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--accent); font-weight: 600; }
+details[open] summary::after { content: "–"; }
+details p { color: var(--muted); margin: .6rem 0 0; }
+
+.contact { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.contact ul { padding-left: 1.1rem; color: var(--muted); }
+
+footer { padding: 2rem 0 3rem; font-size: .85rem; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+
+/* Shared by the niche pages */
+.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.crumbs a { color: var(--muted); }
+.fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+.fit .card p { color: var(--muted); margin: 0; }
+.fit .price { font-size: 1.6rem; }
+.niche-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; }
+.niche-links a { color: var(--text); text-decoration: none; }
+.niche-links a:hover, .niche-links a:focus-visible { border-color: var(--accent); }
+.niche-links p { color: var(--muted); font-size: .92rem; margin: 0; }
+footer nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; width: 100%; }
+footer nav a { color: var(--muted); }
