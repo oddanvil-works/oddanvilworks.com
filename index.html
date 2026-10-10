@@ -3,17 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OddAnvil Works — Websites for interesting projects</title>
-<meta name="description" content="OddAnvil Works builds straightforward, fixed-price websites for independent creators, small businesses, and people bringing new ideas to life.">
-<meta property="og:title" content="OddAnvil Works">
-<meta property="og:description" content="Fixed-price websites for creators, small businesses, and new projects.">
+<title>OddAnvil Works: Fixed-price websites for creators and small businesses</title>
+<meta name="description" content="Straightforward, mobile-friendly websites at fixed prices. One-page sites from $399, small 3–5 page sites from $799. Based in Paducah, Kentucky, working with clients anywhere.">
+<link rel="canonical" href="https://oddanvilworks.com/">
+<meta property="og:title" content="OddAnvil Works: Fixed-price websites">
+<meta property="og:description" content="One-page sites from $399. Small 3–5 page sites from $799. Clear scope, fixed price, launched in weeks.">
 <meta property="og:url" content="https://oddanvilworks.com/">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#1c1a17">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c1a17'/%3E%3Cpath d='M12 24h34c0 6 6 8 8 8v4H40l-4 6h6v6H22v-6h6l-4-6h-4c-4 0-8-4-8-12z' fill='%23d9822b'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "OddAnvil Works LLC",
+  "url": "https://oddanvilworks.com/",
+  "email": "hello@oddanvilworks.com",
+  "description": "Fixed-price website design and setup for independent creators, small businesses and new projects.",
+  "areaServed": "US",
+  "address": {"@type": "PostalAddress", "addressLocality": "Paducah", "addressRegion": "KY", "addressCountry": "US"},
+  "priceRange": "$399–$799",
+  "makesOffer": [
+    {"@type": "Offer", "name": "One-Page Launch Website", "price": "399", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Small Website (3–5 pages)", "price": "799", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Digital Setup add-on", "price": "150", "priceCurrency": "USD"}
+  ]
+}
+</script>
 <style>
   :root {
     --bg: #f6f2ea;
@@ -21,6 +41,7 @@
     --text: #1c1a17;
     --muted: #5d574e;
     --accent: #b45f17;
+    --accent-soft: #f3e3d1;
     --line: #e2dbcd;
   }
   @media (prefers-color-scheme: dark) {
@@ -30,88 +51,258 @@
       --text: #f1ece3;
       --muted: #b0a898;
       --accent: #e38f3f;
+      --accent-soft: #3a2a1b;
       --line: #34302a;
     }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   html, body { margin: 0; }
   body {
     background: var(--bg);
     color: var(--text);
     font: 400 1.0625rem/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
   }
-  .wrap { width: 100%; max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
-  header { padding: 2rem 0 0; }
+  a { color: var(--accent); }
+  .wrap { width: 100%; max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+  .narrow { max-width: 44rem; }
+
+  header.top { padding: 1.5rem 0; }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   .brand {
-    display: inline-flex; align-items: center; gap: .6rem;
+    display: inline-flex; align-items: center; gap: .6rem; color: var(--text); text-decoration: none;
     font: 600 1.05rem/1 Fraunces, Georgia, serif; letter-spacing: .01em;
   }
   .brand svg { width: 2rem; height: 2rem; }
-  main { flex: 1; padding: 4.5rem 0 3rem; }
+  nav.links { display: flex; gap: 1.25rem; font-size: .95rem; }
+  nav.links a { color: var(--muted); text-decoration: none; }
+  nav.links a:hover { color: var(--text); }
+  @media (max-width: 40rem) { nav.links { display: none; } }
+
+  section { padding: 3.5rem 0; }
+  .hero { padding: 4rem 0 3.5rem; }
   .eyebrow {
     display: inline-block; font-size: .8rem; font-weight: 500;
-    letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
-    margin-bottom: 1rem;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
   }
   h1 {
-    font: 600 clamp(2.1rem, 6vw, 3.2rem)/1.1 Fraunces, Georgia, serif;
-    margin: 0 0 1.25rem; letter-spacing: -.01em;
+    font: 600 clamp(2.1rem, 6vw, 3.4rem)/1.08 Fraunces, Georgia, serif;
+    margin: 0 0 1.25rem; letter-spacing: -.01em; max-width: 40rem;
   }
-  .lede { font-size: 1.15rem; color: var(--muted); margin: 0 0 2.75rem; max-width: 36rem; }
-  h2 { font-size: .95rem; font-weight: 500; margin: 0 0 1rem; }
-  ul.coming { list-style: none; padding: 0; margin: 0 0 3rem; display: grid; gap: .75rem; }
-  ul.coming li {
-    background: var(--surface); border: 1px solid var(--line); border-radius: .6rem;
-    padding: .9rem 1.1rem; display: flex; gap: .8rem; align-items: baseline;
+  h2 {
+    font: 600 clamp(1.6rem, 4vw, 2.1rem)/1.15 Fraunces, Georgia, serif;
+    margin: 0 0 .75rem;
   }
-  ul.coming li::before { content: ""; flex: none; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); transform: translateY(-.1rem); }
-  .cta { border-top: 1px solid var(--line); padding-top: 2rem; }
-  .cta p { margin: 0 0 1.1rem; color: var(--muted); }
+  h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 .4rem; }
+  .lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 2rem; max-width: 38rem; }
+  .section-intro { color: var(--muted); margin: 0 0 2rem; max-width: 40rem; }
+
   .button {
     display: inline-block; background: var(--text); color: var(--bg);
-    text-decoration: none; font-weight: 500; padding: .8rem 1.3rem; border-radius: .5rem;
+    text-decoration: none; font-weight: 500; padding: .85rem 1.35rem; border-radius: .5rem;
   }
-  .button:hover, .button:focus-visible { background: var(--accent); color: #fff; }
+  .button.secondary { background: transparent; color: var(--text); border: 1px solid var(--line); }
+  .button:hover, .button:focus-visible { background: var(--accent); color: #fff; border-color: var(--accent); }
   .button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  footer { padding: 2rem 0; font-size: .85rem; color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: .75rem;
+    padding: 1.5rem; display: flex; flex-direction: column;
+  }
+  .card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .price { font: 600 2rem/1 Fraunces, Georgia, serif; margin: .5rem 0 .25rem; }
+  .price small { font: 400 .9rem/1 Inter, sans-serif; color: var(--muted); }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 1rem; }
+  .card ul { margin: 0; padding-left: 1.1rem; }
+  .card li { margin: .3rem 0; }
+  .note { color: var(--muted); font-size: .92rem; margin-top: 1.25rem; max-width: 44rem; }
+
+  ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; display: grid; gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+  ol.steps li { counter-increment: step; background: var(--surface); border: 1px solid var(--line); border-radius: .75rem; padding: 1.25rem; }
+  ol.steps li::before {
+    content: counter(step); display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem;
+    border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 600; margin-bottom: .75rem;
+  }
+  ol.steps p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem 2rem; }
+  .two-col ul { margin: 0; padding-left: 1.1rem; }
+  .two-col li { margin: .35rem 0; }
+
+  details { border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  details:first-of-type { border-top: 1px solid var(--line); }
+  summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--accent); font-weight: 600; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); margin: .6rem 0 0; }
+
+  .contact { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .contact ul { padding-left: 1.1rem; color: var(--muted); }
+
+  footer { padding: 2rem 0 3rem; font-size: .85rem; color: var(--muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
 </style>
 </head>
 <body>
-  <header>
+  <header class="top">
     <div class="wrap">
-      <span class="brand">
+      <a class="brand" href="#top" aria-label="OddAnvil Works home">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="currentColor"/><path d="M12 24h34c0 6 6 8 8 8v4H40l-4 6h6v6H22v-6h6l-4-6h-4c-4 0-8-4-8-12z" fill="#d9822b"/></svg>
         OddAnvil Works
-      </span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="#pricing">Pricing</a>
+        <a href="#process">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <div class="wrap">
-      <span class="eyebrow">Opening soon</span>
-      <h1>A practical home for interesting projects.</h1>
-      <p class="lede">OddAnvil Works builds straightforward websites for independent creators, small businesses, and people bringing new ideas to life. Fixed-price website launches come first, with practical digital setup available when a project needs more than a website.</p>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Fixed-price websites</span>
+        <h1>A practical home for interesting projects.</h1>
+        <p class="lede">OddAnvil Works builds straightforward, mobile-friendly websites for independent creators, small businesses, and people bringing new ideas to life. You get a clear scope, a fixed price, and a site you own, live in a few weeks.</p>
+        <div class="actions">
+          <a class="button" href="#contact">Start a project</a>
+          <a class="button secondary" href="#pricing">See pricing</a>
+        </div>
+      </div>
+    </section>
 
-      <h2>What's coming</h2>
-      <ul class="coming">
-        <li>One-page websites for new projects and ideas.</li>
-        <li>Small, multi-page websites for creators and businesses.</li>
-        <li>Notion setup and basic connections between existing apps.</li>
-      </ul>
+    <section id="pricing">
+      <div class="wrap">
+        <h2>Pricing</h2>
+        <p class="section-intro">Every project has a fixed price agreed before work starts. Pay half to book your spot and the rest before the site goes live.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>One-Page Launch Website</h3>
+            <p class="price">$399 <small>starting</small></p>
+            <p class="meta">Typically 1–2 weeks</p>
+            <ul>
+              <li>One page with sections for what you do, why it matters, and how to reach you</li>
+              <li>Contact link or simple contact form</li>
+              <li>Works on phones, tablets and desktops</li>
+              <li>Page titles and basic search setup</li>
+              <li>Connected to your domain</li>
+              <li>One round of revisions</li>
+            </ul>
+          </article>
+          <article class="card featured">
+            <h3>Small Website</h3>
+            <p class="price">$799 <small>starting</small></p>
+            <p class="meta">3–5 pages · typically 2–4 weeks</p>
+            <ul>
+              <li>Up to five pages, such as Home, About, Services, Gallery and Contact</li>
+              <li>Contact form</li>
+              <li>Works on phones, tablets and desktops</li>
+              <li>Page titles and basic search setup</li>
+              <li>Domain connection and launch help</li>
+              <li>One full round of revisions</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Digital Setup add-on</h3>
+            <p class="price">$150–$250</p>
+            <p class="meta">With a website or on its own</p>
+            <ul>
+              <li>A simple Notion workspace to organize your project or business</li>
+              <li>Or one connection between apps you already use, like form to email</li>
+              <li>Short written notes so you can run it yourself</li>
+            </ul>
+          </article>
+        </div>
+        <p class="note">Prices cover the work. Your domain, website platform plan (such as Squarespace or WordPress hosting), and any paid themes or stock photos are billed to you directly by those companies, and I'll tell you the expected cost up front. Kentucky sales tax is added where it applies.</p>
+      </div>
+    </section>
 
-      <section class="cta">
+    <section id="process">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <p class="section-intro">Four steps, with no surprises about scope or cost.</p>
+        <ol class="steps">
+          <li><h3>Quick call</h3><p>A 15-minute chat about your project, what pages you need, and your timeline.</p></li>
+          <li><h3>Fixed quote</h3><p>You get a written scope and price. A 50% deposit books your start date.</p></li>
+          <li><h3>Build and review</h3><p>You send your text, photos and logo. I build the site and you review it.</p></li>
+          <li><h3>Launch</h3><p>After final payment, the site goes live on your domain and you get the keys.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="two-col">
+          <div>
+            <h2>You'll own everything</h2>
+            <p class="section-intro">Your domain, website account and content stay in your name. When the project is done, you have full control, and you're never locked in to me.</p>
+          </div>
+          <div>
+            <h3>Not included in the packages</h3>
+            <ul>
+              <li>Online stores and e-commerce</li>
+              <li>Custom software or app development</li>
+              <li>Writing all of your page text from scratch</li>
+              <li>Logo and brand design</li>
+              <li>Ongoing maintenance after launch</li>
+            </ul>
+            <p class="note">Need one of these? Ask anyway. I'll tell you honestly whether I'm the right fit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap narrow">
+        <h2>Questions</h2>
+        <details>
+          <summary>What do I need to have ready?</summary>
+          <p>The text for your pages, any photos and your logo, plus access to your domain. If you don't have a domain yet, I'll help you pick and buy one in your name.</p>
+        </details>
+        <details>
+          <summary>Which platform will my site be built on?</summary>
+          <p>Usually Squarespace or WordPress. Both are established, easy to update yourself, and widely supported. We'll pick the one that fits how you want to manage the site.</p>
+        </details>
+        <details>
+          <summary>Can I update the site myself after launch?</summary>
+          <p>Yes. That's the point of using a standard platform. You'll get a short walkthrough at handoff, and bugs in my work are fixed free for 14 days after launch.</p>
+        </details>
+        <details>
+          <summary>How do payments work?</summary>
+          <p>50% when you book, 50% when the site is ready to launch. Invoices are sent online and can be paid by card. Extra work outside the agreed scope is quoted first, at $75 per hour.</p>
+        </details>
+        <details>
+          <summary>Do you only work with businesses in Paducah?</summary>
+          <p>No. I'm based in Paducah, Kentucky, and everything is done remotely, so I can work with you wherever you are.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap narrow">
         <h2>Have a project in mind?</h2>
-        <p>Tell us what you're building.</p>
-        <a class="button" href="mailto:hello@oddanvilworks.com">hello@oddanvilworks.com</a>
-      </section>
-    </div>
+        <p class="section-intro">Email me a few lines about it. Helpful details:</p>
+        <ul>
+          <li>What the project or business is</li>
+          <li>Roughly how many pages you need</li>
+          <li>Whether you already have a domain or website</li>
+          <li>When you'd like to launch</li>
+        </ul>
+        <p><a class="button" href="mailto:hello@oddanvilworks.com?subject=Website%20project">hello@oddanvilworks.com</a></p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="wrap">© 2026 OddAnvil Works LLC</div>
+    <div class="wrap">
+      <span>© 2026 OddAnvil Works LLC · Paducah, Kentucky</span>
+      <a href="mailto:hello@oddanvilworks.com">hello@oddanvilworks.com</a>
+    </div>
   </footer>
 </body>
 </html>
