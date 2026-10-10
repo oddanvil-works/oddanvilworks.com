@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bluegill Exterior Wash (sample site) · OddAnvil Works</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="A sample one-page website for a fictional pressure washing business, built by OddAnvil Works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --sky: #eef5f8; --deep: #0f3b4f; --water: #1f8fb8; --ink: #14212a; --soft: #566673; --sun: #ffb627; --line: #d5e3ea; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--sky); color: var(--ink); font: 400 1.05rem/1.6 "Archivo", system-ui, sans-serif; }
+  .sample { background: #1c1a17; color: #f1ece3; font-size: .85rem; text-align: center; padding: .55rem 1rem; }
+  .sample a { color: #e38f3f; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 0; }
+  .logo { font-weight: 800; font-size: 1.3rem; color: var(--deep); text-decoration: none; letter-spacing: -.01em; }
+  .logo span { color: var(--water); }
+  .call { background: var(--deep); color: #fff; text-decoration: none; padding: .55rem 1rem; border-radius: .5rem; font-weight: 600; white-space: nowrap; }
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; padding: 2rem 0 3rem; }
+  @media (max-width: 46rem) { .hero { grid-template-columns: 1fr; } }
+  h1 { font-weight: 800; font-size: clamp(2.2rem, 6.5vw, 3.4rem); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 1rem; color: var(--deep); }
+  h2 { font-weight: 800; font-size: 1.9rem; line-height: 1.1; margin: 0 0 1rem; color: var(--deep); }
+  .lede { color: var(--soft); font-size: 1.15rem; margin: 0 0 1.5rem; }
+  .btn { display: inline-block; background: var(--sun); color: var(--ink); padding: .85rem 1.3rem; border-radius: .5rem; text-decoration: none; font-weight: 800; }
+  .trust { list-style: none; padding: 0; margin: 1.25rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; color: var(--soft); font-size: .95rem; }
+  .trust li::before { content: "✓ "; color: var(--water); font-weight: 800; }
+  /* Before/after illustration: a driveway, half grimy, half clean */
+  .ba { position: relative; aspect-ratio: 4 / 3; border-radius: 1rem; overflow: hidden; background: linear-gradient(90deg, #7d7a6e 0 50%, #d9dcd8 50%); box-shadow: 0 10px 30px rgba(15,59,79,.18); }
+  .ba::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 23%, rgba(0,0,0,.12) 23% 24%), repeating-linear-gradient(90deg, transparent 0 32%, rgba(0,0,0,.12) 32% 33%); }
+  .ba::after { content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - 2px); width: 4px; background: #fff; }
+  .ba span { position: absolute; bottom: .75rem; background: rgba(20,33,42,.8); color: #fff; font-size: .8rem; font-weight: 600; padding: .25rem .6rem; border-radius: .35rem; }
+  .ba .b { left: .75rem; } .ba .a { right: .75rem; }
+  section { padding: 3rem 0; border-top: 1px solid var(--line); }
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr)); gap: 1rem; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: .85rem; padding: 1.25rem; }
+  .card h3 { margin: 0 0 .25rem; font-size: 1.1rem; }
+  .card .price { color: var(--water); font-weight: 800; margin: 0 0 .5rem; }
+  .card p { margin: 0; color: var(--soft); font-size: .95rem; }
+  .steps { counter-reset: s; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.5rem; }
+  .steps div { counter-increment: s; }
+  .steps div::before { content: counter(s); display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--deep); color: #fff; font-weight: 800; margin-bottom: .6rem; }
+  .steps h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+  .steps p { margin: 0; color: var(--soft); }
+  .area { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  @media (max-width: 46rem) { .area { grid-template-columns: 1fr; } }
+  .towns { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
+  .towns li { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .3rem .8rem; font-size: .95rem; }
+  .quote { background: var(--deep); color: #fff; border-radius: 1rem; padding: 2rem; }
+  .quote h2 { color: #fff; }
+  .quote p { color: #c9dbe4; }
+  footer { padding: 2rem 0 3rem; color: var(--soft); font-size: .9rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+  <div class="sample">Sample site for a fictional business, built by <a href="/">OddAnvil Works</a>. One-Page Launch Website, from $399.</div>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#">Bluegill <span>Exterior Wash</span></a>
+      <a class="call" href="#quote">Get a free quote</a>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Driveways, siding and decks, clean again.</h1>
+        <p class="lede">Pressure and soft washing for homes and small businesses. Send a photo, get a price the same day.</p>
+        <a class="btn" href="#quote">Get a free quote</a>
+        <ul class="trust"><li>Licensed and insured</li><li>Soft wash for siding</li><li>Pet-safe cleaners</li></ul>
+      </div>
+      <div class="ba" role="img" aria-label="Illustration of a concrete driveway, dirty on the left and clean on the right"><span class="b">Before</span><span class="a">After</span></div>
+    </div>
+
+    <section id="services">
+      <h2>Services and starting prices</h2>
+      <div class="services">
+        <div class="card"><h3>Driveways and walkways</h3><p class="price">From $120</p><p>Oil spots, mildew and red clay, lifted with surface cleaners, no streaks.</p></div>
+        <div class="card"><h3>House soft wash</h3><p class="price">From $250</p><p>Low-pressure wash for vinyl and painted siding. Kills algae instead of blasting it.</p></div>
+        <div class="card"><h3>Decks and fences</h3><p class="price">From $150</p><p>Wood-safe pressure, ready for stain the same week.</p></div>
+        <div class="card"><h3>Storefronts</h3><p class="price">Monthly plans</p><p>Sidewalks, entries and dumpster pads on a schedule that suits you.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <div class="steps">
+        <div><h3>Send a photo</h3><p>Text or email a picture of the area and your address.</p></div>
+        <div><h3>Get a price</h3><p>A fixed quote the same day, no surprise add-ons.</p></div>
+        <div><h3>We wash</h3><p>Most homes are done in one visit. You don't need to be there.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="area">
+        <div>
+          <h2>Service area</h2>
+          <p class="lede">Based in western Kentucky, serving the surrounding towns.</p>
+          <ul class="towns"><li>Riverbend</li><li>Lakeview</li><li>Oak Hollow</li><li>Millbrook</li><li>and nearby (fictional)</li></ul>
+        </div>
+        <div>
+          <h2>Hours</h2>
+          <p>Monday to Saturday, 8am to 6pm.<br>Quotes answered within one business day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote">
+      <div class="quote">
+        <h2>Get a free quote</h2>
+        <p>Send a photo and your address, and we'll reply with a fixed price, usually the same day.</p>
+        <a class="btn" href="mailto:hello@oddanvilworks.com?subject=About%20the%20Bluegill%20sample%20site">Request a quote</a>
+      </div>
+    </section>
+
+    <footer>Bluegill Exterior Wash is a fictional business. This page shows what a One-Page Launch Website from <a href="/">OddAnvil Works</a> can look like for a service trade.</footer>
+  </div>
+</body>
+</html>
