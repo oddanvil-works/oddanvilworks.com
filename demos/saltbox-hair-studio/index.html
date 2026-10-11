@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saltbox Hair Studio (sample site) · OddAnvil Works</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="A sample one-page website for a fictional hair salon, built by OddAnvil Works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --cream: #fbf6f2; --blush: #f1dcd3; --plum: #4a2a3a; --rose: #a8505f; --ink: #241a1f; --soft: #6b5a61; --line: #ead9d1; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 400 1.05rem/1.6 "DM Sans", system-ui, sans-serif; }
+  .sample { background: #1c1a17; color: #f1ece3; font-size: .85rem; text-align: center; padding: .55rem 1rem; }
+  .sample a { color: #e38f3f; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 0; }
+  .logo { font: 400 1.5rem/1 "DM Serif Display", Georgia, serif; color: var(--plum); text-decoration: none; }
+  .book { background: var(--plum); color: #fff; text-decoration: none; padding: .55rem 1.05rem; border-radius: 999px; font-weight: 500; white-space: nowrap; }
+  .book:hover, .book:focus-visible, .btn:hover, .btn:focus-visible { background: var(--rose); }
+  a:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.5rem; align-items: center; padding: 2.5rem 0 3.5rem; }
+  @media (max-width: 46rem) { .hero { grid-template-columns: 1fr; } }
+  h1 { font: 400 clamp(2.4rem, 7vw, 3.8rem)/1.02 "DM Serif Display", Georgia, serif; margin: 0 0 1rem; color: var(--plum); }
+  h2 { font: 400 2rem/1.1 "DM Serif Display", Georgia, serif; margin: 0 0 1rem; color: var(--plum); }
+  .lede { color: var(--soft); font-size: 1.15rem; margin: 0 0 1.5rem; }
+  .btn { display: inline-block; background: var(--plum); color: #fff; padding: .85rem 1.4rem; border-radius: 999px; text-decoration: none; font-weight: 500; }
+  .btn.ghost { background: transparent; color: var(--plum); border: 1px solid var(--plum); }
+  .actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .btn.ghost:hover, .btn.ghost:focus-visible { background: var(--blush); }
+  /* Decorative arch in place of a photo */
+  .arch { aspect-ratio: 4 / 5; border-radius: 999px 999px 1rem 1rem; background: radial-gradient(circle at 30% 30%, #fff6 0 18%, transparent 19%), linear-gradient(160deg, var(--blush), #d9a7a0 60%, var(--rose)); box-shadow: 0 14px 40px rgba(74,42,58,.18); }
+  @media (max-width: 46rem) { .arch { aspect-ratio: 2 / 1; } }
+  section { padding: 3rem 0; border-top: 1px solid var(--line); }
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2rem 3rem; }
+  .menu h3 { font: 700 .8rem/1 "DM Sans", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); margin: 0 0 .75rem; }
+  .menu dl { margin: 0; }
+  .menu dl div { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 1px dotted var(--line); }
+  .menu dt { font-weight: 500; } .menu dd { margin: 0; color: var(--soft); white-space: nowrap; }
+  .note { color: var(--soft); font-size: .92rem; margin-top: 1.25rem; }
+  .team { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+  .person { background: #fff; border: 1px solid var(--line); border-radius: 1rem; padding: 1.25rem; }
+  .avatar { width: 3.2rem; height: 3.2rem; border-radius: 50%; display: grid; place-items: center; background: var(--blush); color: var(--plum); font: 400 1.3rem/1 "DM Serif Display", serif; margin-bottom: .75rem; }
+  .person h3 { margin: 0; font-size: 1.1rem; } .person .role { color: var(--rose); font-size: .9rem; margin: .1rem 0 .5rem; }
+  .person p { margin: 0; color: var(--soft); font-size: .95rem; }
+  .visit { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2rem; }
+  .hours div { display: flex; justify-content: space-between; max-width: 18rem; padding: .2rem 0; }
+  .policies { background: var(--plum); color: #f6e9e4; border-radius: 1rem; padding: 2rem; }
+  .policies h2 { color: #fff; } .policies ul { margin: 0; padding-left: 1.1rem; } .policies li { margin: .4rem 0; }
+  .policies .btn { background: #fff; color: var(--plum); margin-top: 1.25rem; }
+  footer { padding: 2rem 0 3rem; color: var(--soft); font-size: .9rem; border-top: 1px solid var(--line); }
+  footer a { color: var(--rose); }
+</style>
+</head>
+<body>
+  <div class="sample">Sample site for a fictional business, built by <a href="/">OddAnvil Works</a>. One-Page Launch Website, from $399.</div>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#">Saltbox Hair Studio</a>
+      <a class="book" href="#book">Book now</a>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Good hair days, on purpose.</h1>
+        <p class="lede">Cuts, color and blowouts in a small, unhurried studio. Three stylists, one chair each, and time to talk about what you actually want.</p>
+        <div class="actions"><a class="btn" href="#book">Book an appointment</a><a class="btn ghost" href="#menu">See prices</a></div>
+      </div>
+      <div class="arch" role="img" aria-label="Decorative arch in blush and rose tones"></div>
+    </div>
+
+    <section id="menu">
+      <h2>Services and prices</h2>
+      <div class="menu">
+        <div class="col">
+          <h3>Cut &amp; style</h3>
+          <dl>
+            <div><dt>Women's cut &amp; style</dt><dd>from $45</dd></div>
+            <div><dt>Men's cut</dt><dd>from $25</dd></div>
+            <div><dt>Kids (12 and under)</dt><dd>from $18</dd></div>
+            <div><dt>Blowout</dt><dd>from $35</dd></div>
+            <div><dt>Special-occasion updo</dt><dd>from $65</dd></div>
+          </dl>
+        </div>
+        <div class="col">
+          <h3>Color</h3>
+          <dl>
+            <div><dt>All-over color</dt><dd>from $75</dd></div>
+            <div><dt>Partial highlights</dt><dd>from $95</dd></div>
+            <div><dt>Full highlights or balayage</dt><dd>from $140</dd></div>
+            <div><dt>Gloss / toner</dt><dd>from $35</dd></div>
+            <div><dt>Brow tint</dt><dd>$15</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="note">Prices depend on length and thickness. New color clients start with a free 15-minute consultation.</p>
+    </section>
+
+    <section>
+      <h2>Meet the stylists</h2>
+      <div class="team">
+        <div class="person"><div class="avatar">J</div><h3>Jess</h3><p class="role">Owner · color specialist</p><p>Lived-in blondes and low-maintenance color you don't have to touch up every month.</p></div>
+        <div class="person"><div class="avatar">R</div><h3>Rosa</h3><p class="role">Stylist · curly hair</p><p>Dry cuts for curls and coils, plus a routine you can repeat at home.</p></div>
+        <div class="person"><div class="avatar">D</div><h3>Dana</h3><p class="role">Stylist · cuts &amp; barbering</p><p>Clean short cuts, fades and beard trims. Walk-ins welcome when the chair's open.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="visit">
+        <div>
+          <h2>Visit</h2>
+          <p>214 Water Street, Riverbend (fictional)<br>Free parking behind the building.<br>Step-free entrance.</p>
+        </div>
+        <div class="hours">
+          <h2>Hours</h2>
+          <div><span>Tue – Fri</span><span>9am – 7pm</span></div>
+          <div><span>Saturday</span><span>8am – 3pm</span></div>
+          <div><span>Sun – Mon</span><span>Closed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="book">
+      <div class="policies">
+        <h2>Book an appointment</h2>
+        <p>Book online any time, or call or text during studio hours. A few things to know:</p>
+        <ul>
+          <li>Please give 24 hours' notice to cancel or reschedule.</li>
+          <li>Running late? Text us. After 15 minutes we may need to shorten or move your service.</li>
+          <li>Color clients: a patch test 48 hours before your first visit keeps everyone safe.</li>
+        </ul>
+        <a class="btn" href="mailto:hello@oddanvilworks.com?subject=About%20the%20Saltbox%20sample%20site">Book online</a>
+      </div>
+    </section>
+
+    <footer>Saltbox Hair Studio is a fictional business. This page shows what a One-Page Launch Website from <a href="/">OddAnvil Works</a> can look like for a salon. On a real site, "Book online" links to the booking app you already use (Square, Vagaro, GlossGenius, Fresha and others).</footer>
+  </div>
+</body>
+</html>
