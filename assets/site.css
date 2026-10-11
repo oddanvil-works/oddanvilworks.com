@@ -3,7 +3,7 @@
   --surface: #ffffff;
   --text: #1c1a17;
   --muted: #5d574e;
-  --accent: #b45f17;
+  --accent: #9c500e;
   --accent-soft: #f3e3d1;
   --line: #e2dbcd;
 }
@@ -27,6 +27,7 @@ body {
   font: 400 1.0625rem/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 a { color: var(--accent); }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 .wrap { width: 100%; max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
 .narrow { max-width: 44rem; }
 
